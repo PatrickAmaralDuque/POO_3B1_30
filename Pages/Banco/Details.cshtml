@@ -1,0 +1,43 @@
+﻿@page
+@model POO_3B1_30.Pages.Banco.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>@Html.DisplayFor(model => model.BancoDTO.Title)</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Nome
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BancoDTO.Title)
+        </dd>
+        <dt class="col-sm-2">
+            Lançamento
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BancoDTO.ReleaseDate)
+        </dd>
+        <dt class="col-sm-2">
+            Autor
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BancoDTO.Genre)
+        </dd>
+        <dt class="col-sm-2">
+            Preço
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BancoDTO.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.BancoDTO.ID">Editar</a> |
+    <a asp-page="./Index">Voltar</a>
+</div>

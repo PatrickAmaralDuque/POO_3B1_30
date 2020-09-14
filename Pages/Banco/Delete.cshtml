@@ -1,0 +1,46 @@
+﻿@page
+@model POO_3B1_30.Pages.Banco.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Deletar</h1>
+
+<h3>Tem certeza, que deseja deletar?</h3>
+<div>
+    <h4>@Html.DisplayFor(model => model.BancoDTO.Title)</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Nome
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BancoDTO.Title)
+        </dd>
+        <dt class="col-sm-2">
+            Lançamento
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BancoDTO.ReleaseDate)
+        </dd>
+        <dt class="col-sm-2">
+            Autor
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BancoDTO.Genre)
+        </dd>
+        <dt class="col-sm-2">
+            Preço
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BancoDTO.Price)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="BancoDTO.ID" />
+        <input type="submit" value="Deletar" class="btn btn-danger" /> |
+        <a asp-page="./Index">Voltar</a>
+    </form>
+</div>
